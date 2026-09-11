@@ -128,3 +128,14 @@ Console.WriteLine($"Хороший экзамен (>= 60): {hasGoodExam}");
 Console.WriteLine($"Льгота: {hasBenefit}");
 Console.WriteLine($"Проходит по правилам: {isEligibleByRules}");
 Console.WriteLine($"Итоговый балл: {totalScore}");
+
+Console.WriteLine();
+Console.WriteLine("Задание 1. Чётное или нечётное");
+
+Console.Write("Введите целое число: ");
+int number = int.Parse(Console.ReadLine());
+
+bool shet = (number % 2 == 0);
+
+Console.WriteLine($"Число {number} чётное: {shet}");
+
