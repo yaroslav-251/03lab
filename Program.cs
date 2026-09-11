@@ -1,4 +1,5 @@
 ﻿using System.Linq.Expressions;
+using System.Threading.Tasks.Dataflow;
 
 Console.WriteLine("Банковский счет");
 
@@ -152,3 +153,18 @@ Console.WriteLine($"После этого a = {a}"); // 6
 // ++b сначала увеличивает b до 6, потом отдаёт новое значение (6)
 Console.WriteLine($"++b даёт: {++b}");   // выведет 6
 Console.WriteLine($"После этого b = {b}"); // 6
+
+Console.WriteLine();
+Console.WriteLine("Задание 3");
+Console.Write("Введите сумму покупки:");
+double summa = double.Parse(Console.ReadLine());
+Console.Write("Есть карта постоянного клиента? (ответ 1 - да, 0 - нет):");
+int kartaInput = int.Parse(Console.ReadLine());
+bool karta = (kartaInput == 1);
+Console.Write("Количество товаров в чеке:");
+int kolvo = int.Parse(Console.ReadLine());
+bool eligibleForDiskont = (summa >= 3000) && (kolvo >= 3) || karta;
+Console.WriteLine($"{eligibleForDiskont}");
+
+
+
