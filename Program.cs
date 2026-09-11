@@ -84,3 +84,14 @@ Console.WriteLine();
 Console.WriteLine($"Проверяем || (первый операнд true)");
 bool resultOr = CheckAndPrint("C", true) || CheckAndPrint("D", false);
 Console.WriteLine($"Результат: {resultOr}");
+
+Console.WriteLine();
+Console.WriteLine("Приоритет операций");
+
+int resultNoParens = 2 + 3 * 4;
+int resultResultParens = (2 + 3) * 4;
+Console.WriteLine($"2 + 3 * 4 = {resultNoParens}");
+Console.WriteLine($"(2 + 3) * 4 = {resultResultParens}");
+bool logicResult = 5 > 3 && 2 < 4 || false;
+Console.WriteLine($"5>3 && 2<4 || false = {logicResult}");
+Console.WriteLine($"(5>3 && 2<4) || false = {resultResultParens}");
