@@ -1,4 +1,6 @@
-﻿Console.WriteLine("Банковский счет");
+﻿using System.Linq.Expressions;
+
+Console.WriteLine("Банковский счет");
 
 double balance = 1000;
 Console.WriteLine($"Начальный баланс {balance}");
@@ -34,3 +36,51 @@ Console.WriteLine($"Попытка №{++attempts}");
 Console.WriteLine($"Попытка №{++attempts}");
 Console.WriteLine($"Всего попыток: {++attempts}");
 
+Console.WriteLine();
+Console.WriteLine("Операторы сравнения");
+
+double myGrade = 4.6;
+double passingGrade = 4.0;
+int myAge = 20;
+int votingAge = 18;
+bool isPassing = myGrade >= passingGrade;
+bool isExactAge = myAge == votingAge;
+bool canVote = myAge >= votingAge;
+bool isNotFailing = myGrade != 2.0;
+
+Console.WriteLine($"Балл {myGrade} >= {passingGrade}: {isPassing}");
+Console.WriteLine($"Возраст {myAge} == {votingAge}: {isExactAge}");
+Console.WriteLine($"Возраст {myAge} >= {votingAge} (может голосовать): {canVote}");
+Console.WriteLine($"Балл {myGrade} != 2.0 (не двойка): {isNotFailing}");
+
+Console.WriteLine();
+Console.WriteLine("Логические операторы");
+
+bool hasPassingGrade = true;
+bool hasAttendance = false;
+bool hasDebt = true;
+
+bool canGetScholarShip = hasPassingGrade && hasAttendance;
+bool canRetakeExan = hasPassingGrade || hasAttendance;
+bool isDebtFree = !hasDebt;
+Console.WriteLine($"может получить стипендию (оценка и посещаемость): {canGetScholarShip}");
+Console.WriteLine($"Может пересдать (оценка или посещаемость): {canRetakeExan}");
+Console.WriteLine($"Нет долгов: {isDebtFree}");
+
+Console.WriteLine();
+Console.WriteLine("Короткое замыкание");
+
+bool CheckAndPrint(string label, bool value)
+{
+    Console.WriteLine($"Вычисляется: {label}");
+    return value;
+}
+
+Console.WriteLine("Проверяем && (первый операнд false):");
+bool resultAnd = CheckAndPrint("A", false) && CheckAndPrint("B", true);
+Console.WriteLine($"Результат: {resultAnd}");
+
+Console.WriteLine();
+Console.WriteLine($"Проверяем || (первый операнд true)");
+bool resultOr = CheckAndPrint("C", true) || CheckAndPrint("D", false);
+Console.WriteLine($"Результат: {resultOr}");
