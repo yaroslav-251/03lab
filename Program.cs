@@ -139,3 +139,16 @@ bool shet = (number % 2 == 0);
 
 Console.WriteLine($"Число {number} чётное: {shet}");
 
+Console.WriteLine();
+Console.WriteLine("Задание 2");
+
+int a = 5;
+int b = 5;
+
+// a++ сначала отдаёт старое значение (5), потом увеличивает a до 6
+Console.WriteLine($"a++ даёт: {a++}");   // выведет 5
+Console.WriteLine($"После этого a = {a}"); // 6
+
+// ++b сначала увеличивает b до 6, потом отдаёт новое значение (6)
+Console.WriteLine($"++b даёт: {++b}");   // выведет 6
+Console.WriteLine($"После этого b = {b}"); // 6
